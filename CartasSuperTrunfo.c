@@ -4,7 +4,7 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+//Teste Gustavo
 
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
@@ -26,6 +26,8 @@ int main() {
     float Area1;
     float Pib1;
     int PontosTuristicos1;
+    float Densidade1;
+    float PibPercapita1;
 
     char Estado2;
     char Codigo2[4];
@@ -34,6 +36,8 @@ int main() {
     float Area2;
     float Pib2;
     int PontosTuristicos2;
+    float Densidade2;
+    float PibPercapita2;
 
     printf("\nCadastro da Carta 1:\n");
 
@@ -58,6 +62,9 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &PontosTuristicos1);
 
+    Densidade1 = Populacao1 / Area1;
+    PibPercapita1 = (Pib1 * 1000000000) / Populacao1;
+
     printf("\nCadastro da Carta 2:\n");
 
     printf("Digite o estado (letra de A a H): ");
@@ -81,6 +88,9 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &PontosTuristicos2);
 
+    Densidade2 = Populacao2 / Area2;
+    PibPercapita2 = (Pib2 * 1000000000) / Populacao2;
+
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", Estado1);
     printf("Código: %s\n", Codigo1);
@@ -89,6 +99,8 @@ int main() {
     printf("Área: %.2f km²\n", Area1);
     printf("PIB: %.2f bilhões de reais\n", Pib1);
     printf("Número de Pontos Turísticos: %d\n", PontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", Densidade1);
+    printf("PIB per Capita: R$ %.2f\n", PibPercapita1);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", Estado2);
@@ -98,6 +110,8 @@ int main() {
     printf("Área: %.2f km²\n", Area2);
     printf("PIB: %.2f bilhões de reais\n", Pib2);
     printf("Número de Pontos Turísticos: %d\n", PontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", Densidade2);
+    printf("PIB per Capita: R$ %.2f\n", PibPercapita2);
 
     return 0;    
 
